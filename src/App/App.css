@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+
+
+}
+.App * {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13.9904px;
 }
 
 .App-logo {
