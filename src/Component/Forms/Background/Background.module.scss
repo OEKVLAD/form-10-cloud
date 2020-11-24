@@ -1,0 +1,174 @@
+@import './src/_variables.scss';
+
+.backgroundForm {
+  margin: 0;
+  background: $primary-background;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  @media only screen and (max-width: 760px) {
+    padding-bottom: 20%;
+  }
+  box-sizing: border-box;
+}
+
+.backgroundSecondaryForm {
+  position: absolute;
+  width: 660.86px;
+  height: 616.33px;
+  left: 0;
+  top: 0;
+  mask: url(./assets/gredient.svg);
+  background: linear-gradient(90deg, #8658EB -8.17%, #652AE6 112.28%);
+  box-shadow: 0 20px 25px rgba(32, 31, 54, 0.05);
+  max-width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    top: -111px;
+  }
+
+}
+
+.backgroundContainer {
+  background: white;
+  display: flex;
+  width: 100%;
+  position: relative;
+
+}
+
+.backgroundTittleContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+
+.backgroundTittle {
+  top: -96px;
+  @media only screen and (max-width: 760px) {
+    top: -76px;
+  }
+
+  position: relative;
+  margin: 0 auto auto;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48.0463px;
+  line-height: 48px;
+  /* identical to box height, or 100% */
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #FFFFFF;
+}
+
+.backgroundMainContainer {
+  z-index: 1;
+  margin: auto;
+  max-width: 728px;
+  width: 75%;
+
+  @media only screen and (max-width: 768px) {
+    width: calc(100% - 32px);
+  }
+
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  @media only screen and (max-width: 1378px) {
+    margin: 152px auto auto;
+  }
+
+  @media only screen and (max-width: 760px) {
+    box-shadow: 0px 20px 25px rgba(32, 31, 54, 0.05);
+  }
+}
+
+.backgroundLeftImage {
+  @media only screen and (max-width: 992px) {
+   display: none;
+  }
+
+  z-index: 0;
+  position: relative;
+  background: #202020;
+  min-height: 552px;
+  min-width: 256px;
+  .imageLayer{
+    position: absolute;
+    left: 0;
+  }
+  .imageLines{
+    position: absolute;
+    left: 12px;
+    top: 98px;
+  }
+}
+
+.backgroundProgressIndicator {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.indicator {
+  width: 70px;
+  height: 2px;
+  left: 652px;
+  top: 153px;
+
+  background: #ffffff00;
+}
+.indicator.active {
+  width: 70px;
+  height: 2px;
+  left: 652px;
+  top: 153px;
+
+  background: #1BFEC0;
+}
+
+.backgroundProgressIndicatorWithInfo {
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+  position: absolute;
+  right: -68px;
+  top: 104px;
+  display: flex;
+  flex-direction: column;
+}
+
+.indicatorText {
+  .indicatorLine{
+    width: 25px;
+    height: 2px;
+
+    background: #F9F9FB;
+    opacity: 0.25;
+  }
+  .indicatorTittle {
+    height: 90px;
+    color: white;
+    text-align: left;
+    margin-left: 8px;
+  }
+}
+.indicatorText.active {
+  .indicatorLine{
+    background: #1BFEC0;
+    opacity: 1;
+  }
+}
