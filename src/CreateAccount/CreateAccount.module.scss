@@ -1,0 +1,111 @@
+.formContainer {
+  display: flex;
+  padding: 0 34px;
+  flex-direction: column;
+  height: 552px;
+  @media only screen and (max-width: 760px) {
+    padding: 0 8px;
+  }
+  *{
+    box-sizing: border-box;
+  }
+}
+
+.textHelper {
+  font-size: 13.9904px;
+  text-align: left;
+  padding: 46px 16px;
+  letter-spacing: 0.279779px;
+  line-height: 23.98px;
+  @media only screen and (max-width: 760px) {
+    padding: 16px 8px;
+
+  }
+}
+
+.formRow {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+
+.col {
+  width: 100%;
+  padding: 0 16px;
+}
+
+.colCountryCode {
+
+  width: 33.33%;
+  @media only screen and (max-width: 768px) {
+    width: 50%;
+  }
+  padding: 0 16px;
+}
+.colPhone {
+
+  width: 66.66%;
+  @media only screen and (max-width: 768px) {
+    width: 50%;
+  }
+  padding: 0 16px;
+}
+
+.col5 {
+  width: 41.66%;
+  padding: 0 16px;
+}
+
+.col2 {
+  width: 16.66%;
+  padding: 0 16px;
+}
+
+.buttonPanel {
+  position: absolute;
+  bottom: -25px;
+  right: -50px;
+  @media only screen and (max-width: 768px) {
+    right: initial;
+    width: 100%;
+    display: flex;
+    .buttonPanelContainer {
+      margin: auto;
+    }
+  }
+}
+
+.colData {
+  @media only screen and (max-width: 768px) {width: 25%;}
+  width: 20.3%;
+  padding: 0 12.5px 0 16px;
+
+}
+
+.colMonth {
+  @media only screen and (max-width: 768px) {width: 25%;}
+  padding: 0 12.5px;
+  width: 41.1%;
+  position: relative;
+
+  &:after, &:before {
+    content: "-";
+    position: absolute;
+    top: 50%
+  }
+  &:after {
+    left: -2px;
+    color: #DADAED;
+  }
+  &:before {
+    right: -2px;
+    color: #DADAED;
+  }
+}
+
+.colYear {
+  @media only screen and (max-width: 768px) {width: 50%;}
+  padding: 0  16px 0 12.5px;
+  width: 38.6%;
+}
