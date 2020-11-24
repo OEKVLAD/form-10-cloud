@@ -1,0 +1,106 @@
+.inputText {
+  width: 100%;
+  display: flex;
+  label {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 78px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.inputTittleContainer {
+  width: 100%;
+  display: flex;
+  height: 28px;
+  position: relative;
+}
+.inputTittle {
+  padding: 0 16px;
+  @media only screen and (max-width: 760px) {
+    padding: 0 8px;
+  }
+
+
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+
+  top: 38px;
+  font-size: 15.9365px;
+  color: #DADAED;
+
+  width: 100%;
+  z-index: 1;
+  visibility: visible;
+
+  transition: top .375s, font-size .375s, color .375s, visibility .375s;
+}
+.inputTittle.active, .inputTittle.unValid {
+  font-size: 10.9564px;
+
+  color: #202020;
+
+  top: 0;
+  &.noTittle {
+    visibility: hidden;
+    top: 32px;
+    z-index: 0;
+    color: #ffffff00;
+  }
+}
+
+
+.inputField {
+  padding: 9px 16px;
+  @media only screen and (max-width: 760px) {
+    padding: 9px 8px;
+  }
+
+  font-size: 15.9365px;
+  line-height: 28px;
+  display: flex;
+  letter-spacing: 0.318787px;
+
+  width: 100%;
+
+  color: #202020;
+
+  border: 2px solid #DADAED;
+  transition: border .375s, color .375s;
+  outline: 0;
+}
+.inputField.unValid {
+  color: #EB5757;
+  border-color: #EB5757;
+}
+.inputField.active {
+  border-color: #652AE6;
+}
+
+.inputValidContainer {
+  height: 28px;
+  width: 100%;
+}
+.inputValidTittle {
+  visibility: hidden;
+  padding: 0 16px;
+  @media only screen and (max-width: 760px) {
+    padding: 0 8px;
+  }
+  text-align: left;
+  font-size: 10.9564px;
+  width: 100%;
+  display: flex;
+  color: #00000000;
+  transition: color .375s;
+}
+.inputValidTittle.unValid {
+  visibility: visible;
+  color: #EB5757;
+}

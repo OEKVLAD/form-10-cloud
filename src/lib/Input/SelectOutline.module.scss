@@ -1,0 +1,188 @@
+.inputText {
+  width: 100%;
+  display: flex;
+  position: relative;
+  label {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 78px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
+//
+.inputTittleContainer {
+  width: 100%;
+  display: flex;
+  height: 28px;
+  position: relative;
+}
+.inputTittle {
+  padding: 0 16px;
+  @media only screen and (max-width: 760px) {
+    padding: 0 8px;
+  }
+  @media only screen and (max-width: 760px) {
+    padding: 0 8px;
+    overflow: hidden;
+    width: calc(100% - 16px);
+  }
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+
+  top: 40px;
+  font-size: 15.9365px;
+  color: #DADAED;
+
+  width: 100%;
+
+  transition: top .375s, font-size .375s, color .375s;
+}
+.inputTittle.active, .inputTittle.unValid {
+  font-size: 10.9564px;
+
+  color: #202020;
+
+  top: 0;
+  &.noTittle {
+    visibility: hidden;
+    top: 40px;
+    z-index: 0;
+    color: #ffffff00;
+  }
+}
+
+.inputUnderline {
+  width: 100%;
+  margin-top: 2px;
+  height: 2px;
+  background: #DADAED;
+  transition: background .375s;
+}
+.inputUnderline.active {
+  background: #652AE6;
+}
+.inputUnderline.unValid {
+  background: #EB5757;
+}
+
+.inputField {
+  padding: 9px 16px;
+  @media only screen and (max-width: 760px) {
+    padding: 9px 8px;
+  }
+
+  font-size: 15.9365px;
+  line-height: 28px;
+  display: flex;
+  letter-spacing: 0.318787px;
+
+  width: 100%;
+
+  color: #202020;
+
+  border: 2px solid #DADAED;
+  transition: border .375s, color .375s;
+  outline: 0;
+}
+.inputField.unValid {
+  color: #EB5757;
+  border-color: #EB5757;
+}
+.inputField.active {
+  border-color: #652AE6;
+}
+
+.inputValidContainer {
+  height: 28px;
+  width: 100%;
+}
+.inputValidTittle {
+  visibility: hidden;
+  padding: 0 16px;
+  @media only screen and (max-width: 760px) {
+    padding: 0 8px;
+  }
+  text-align: left;
+  font-size: 10.9564px;
+  width: 100%;
+  display: flex;
+  color: #00000000;
+  transition: color .375s;
+}
+.inputValidTittle.unValid {
+  visibility: visible;
+  color: #EB5757;
+}
+
+.inputVariantContainer{
+  padding-top: 16px;
+  display: none;
+  height: 128px;
+  overflow: auto;
+}
+.inputVariantContainer.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: white;
+  top: 78px;
+  right: 0;
+  width: 100%;
+
+  z-index: 3;
+
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+.inputVariant {
+  height: 40px;
+  padding: 8px 16px;
+  @media only screen and (max-width: 760px) {
+    padding: 8px;
+  }
+  width: 100%;
+  text-align: left;
+}
+
+.inputVariant:hover {
+
+  background: #DADAED;
+}
+
+.inputArrow {
+  position: absolute;
+  width: 9px;
+  height: 4px;
+  right: 16px;
+  @media only screen and (max-width: 760px) {
+    right: 4px;
+  }
+  top: 50px;
+  mask: url(./assets/dropdown_arrow.svg);
+  background: linear-gradient(90deg, #8658EB -8.17%, #652AE6 112.28%);
+  box-shadow: 0 20px 25px rgba(32, 31, 54, 0.05);
+
+  transform: rotate(0deg);
+  transition: transform .375s;
+}
+
+.inputArrow.active {
+  transform: rotate(180deg);
+}
+
+.desktop {
+  @media only screen and (max-width: 760px) {
+    display: none;
+  }
+}
+.mobile {
+  @media only screen and (min-width: 760.5px) {
+    display: none;
+  }
+}
